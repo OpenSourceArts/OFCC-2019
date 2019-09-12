@@ -1,0 +1,138 @@
+:root {
+  --purple: #7621bf;
+  --green: #37a06b;
+  --bodycopy: #222222;
+  --buttonStripe2: #CA2127;
+  --button-text-color: #ffffff;
+  --fade-anim:                           transform 0s linear 0.35s, visibility 0s linear 0.35s, opacity 0.35s linear;
+  --fade-anim-showing:                   visibility 0s linear, opacity 0.35s linear;
+  --fade-anim-showing-delayed:           transform 0s linear, visibility 0s linear, 1.65s opacity 0.35s linear;
+  --opacity-transition-medium:           opacity 0.5s linear;
+  --eased-transition-medium:             transform 0.75s cubic-bezier(.53,0,.53,1);
+}
+
+
+* {
+  /* -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none; */
+  box-sizing: border-box;
+}
+
+body {
+  transition: opacity 0.5s linear;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--bodycopy);
+  width: 100vw;
+  height: 100vh;
+  font-weight: normal;
+}
+
+@media (min-width: 700px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+body.ready {
+  opacity: 1
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+  margin-bottom: 1rem;
+  color: var(--purple);
+}
+
+@media (min-width: 700px) {
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+h1 {
+  padding: 3rem 0 2rem 172px;
+  background-image: url(../images/COSAlogo.jpg);
+  background-size: 150px;
+  background-repeat: no-repeat;
+  background-position: 0px 1.5rem;
+}
+
+@media (max-width: 699px) {
+  h1 {
+    font-size: 1.8rem;
+    padding: 6rem 0 1rem 0;
+    text-align: center;
+    background-size: 72px;
+    background-position: 50% 1.1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.shadow {
+  filter: drop-shadow( 0 0.1rem 0.6rem rgba(0,0,0,1.0) );
+}
+
+a, a:active, a:hover a:visited {
+  color: var(--purple);
+  text-decoration: underline;
+  transition: color 0.2s linear;
+}
+a:hover {
+  color: var(--green);
+}
+
+/* Content container */
+
+#content {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+@media (min-width: 549px) {
+  #content {
+    padding: 0 2rem;
+  }
+}
+
+#content > * {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+#content > img {
+  margin-bottom: 1.5rem;
+}
+#content > h2 {
+  padding-top: 1.5rem;
+}
+
+@media (min-width: 700px) {
+  #content > * {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Schedule */
+
+.schedule-item {
+}
+
+.schedule-item .time {
+  color: var(--green);
+}
+
+.schedule-item .title {
+  color: var(--purple);
+}
+
+.schedule-item .info {
+  font-size: 1rem;
+}
+.schedule-item .title .info {
+  color: var(--bodycopy);
+}
